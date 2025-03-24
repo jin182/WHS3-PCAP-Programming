@@ -57,7 +57,7 @@ void packet_handler(u_char *user_data, const struct pcap_pkthdr *pkthdr, const u
 // 메인 함수
 int main() {
     char errbuf[PCAP_ERRBUF_SIZE];
-    pcap_t *handle = pcap_open_live("eth0", BUFSIZ, 1, 1000, errbuf);
+    pcap_t *handle = pcap_open_live("ens32", BUFSIZ, 1, 1000, errbuf);
 
     if (handle == NULL) {
         fprintf(stderr, "Couldn't open device: %s\n", errbuf);
